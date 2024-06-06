@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper-3.4.2.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/swiper-3.4.2.min.js" type="text/javascript"></script>
+</head>
+<body style=" padding:0px; ">
+    <div class="login">
+        <form>
+        <div class="form">
+            <input id="username" type="text" placeholder="Enter password" />
+            <input id="Submit1" type="button" value="Submit" onclick=" checkForm()" />
+        </div>
+        <p id="tishi">
+            &nbsp; </p>
+        </form>
+        <div id="close" onclick="window.history.go(-1)">
+            <img src="images/close.png" />
+
+
+
+        </div>
+
+        <script>
+
+            function checkuname() {
+                var uname = document.getElementById("username").value;
+                if (uname == "") {
+                    document.getElementById("tishi").innerHTML = "Please enter the correct password."; 
+                    return false;
+                } else {
+                     
+                    return true;
+                }
+            } 
+
+            function checkForm() {
+                if (checkuname()) { 
+                    window.location.href = "index.html";
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+
+
+
+
+    </div>
+     
+</body>
+</html>
